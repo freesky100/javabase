@@ -28,8 +28,9 @@ public class BlockLinkedQueue {
 
     private int get() throws InterruptedException {
 //        return queue.poll();
-        int remove = queue.poll();
-//        int remove= queue.take();
+//        int remove = queue.poll();//会抛异常（正常返回tureor false)
+        int remove = queue.remove();//会抛异常
+//        int remove= queue.take();//会阻塞
         System.out.println(Thread.currentThread().getName()+"移除元素:"+remove);
         return remove;
     }
