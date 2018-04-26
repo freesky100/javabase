@@ -13,8 +13,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Worker worker = new Worker();
-        Master master = new Master(worker,10);
+        int num = Runtime.getRuntime().availableProcessors();
+        System.out.println("当前机器处理器数目："+num);
+        Master master = new Master(new Worker(),20);
         int total = 0;//单价相加结果
         for(int i=0;i<100;i++)
         {
@@ -24,10 +25,12 @@ public class Main {
         }
         System.out.println("期待分布式计算结果为:"+total);
         master.execute();
-
+        long t1 = System.currentTimeMillis();
         int lastTotal =0;//看一看多线程运算后结果
         while(true){
             if(master.isComplete()){
+                long t2 = System.currentTimeMillis();
+                System.out.println("耗时："+(t2-t1));
                 Map<String,Object> map = master.getResMap();
                 System.out.println(map);
                 for(Map.Entry<String,Object> me :map.entrySet()){
