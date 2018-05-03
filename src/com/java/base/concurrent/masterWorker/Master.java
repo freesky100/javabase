@@ -1,4 +1,4 @@
-package com.java.base.MasterWorker;
+package com.java.base.concurrent.masterWorker;
 
 
 import java.util.HashMap;

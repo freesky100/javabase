@@ -1,4 +1,4 @@
-package com.java.base.MasterWorker;
+package com.java.base.concurrent.masterWorker;
 
 /**
  * Created by yw on 2018/4/26.

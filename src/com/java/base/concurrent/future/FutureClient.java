@@ -1,4 +1,4 @@
-package com.java.base.Future;
+package com.java.base.concurrent.future;
 
 /**
  * Created by yw on 2018/4/25.

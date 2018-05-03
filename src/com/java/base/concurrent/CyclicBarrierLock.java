@@ -1,13 +1,14 @@
-package com.java.base;
+package com.java.base.concurrent;
 
-import javax.naming.Name;
-import java.sql.Time;
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 一组线程等待某一个线程执行完毕后并发执行后续操作
+ *
+ *
  * Created by yw on 2018/4/26.
  */
 public class CyclicBarrierLock {
@@ -63,6 +64,7 @@ public class CyclicBarrierLock {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            System.out.println(Thread.currentThread().getName()+"大会进行中，开1个小时...");
         }
     }
 

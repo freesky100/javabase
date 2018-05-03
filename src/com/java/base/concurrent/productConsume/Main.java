@@ -1,4 +1,4 @@
-package com.java.base.ProductConsume;
+package com.java.base.concurrent.productConsume;
 
 import java.util.concurrent.*;
 

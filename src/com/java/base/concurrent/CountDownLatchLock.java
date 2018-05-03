@@ -1,4 +1,4 @@
-package com.java.base;
+package com.java.base.concurrent;
 
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 不可循环共享锁
+ * 一个线程，等待一组线程完成后执行后续操作
  * Created by yw on 2018/4/26.
  */
 public class CountDownLatchLock {

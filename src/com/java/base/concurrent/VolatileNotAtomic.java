@@ -1,6 +1,5 @@
-package com.java.base;
+package com.java.base.concurrent;
 
-import java.util.concurrent.TimeUnit;
 
 /**
  *

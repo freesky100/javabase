@@ -1,4 +1,4 @@
-package com.java.base.ProductConsume;
+package com.java.base.concurrent.productConsume;
 
 /**
  * Created by yw on 2018/4/26.

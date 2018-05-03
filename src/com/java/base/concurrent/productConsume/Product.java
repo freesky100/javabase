@@ -1,8 +1,5 @@
-package com.java.base.ProductConsume;
+package com.java.base.concurrent.productConsume;
 
-import sun.plugin2.message.Message;
-
-import java.util.Queue;
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
