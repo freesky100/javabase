@@ -1,0 +1,47 @@
+package com.java.base.gof.callback;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.beans.ConstructorProperties;
+
+/**
+ * //          佛曰:
+ * //                  写字楼里写字间，写字间里程序员；
+ * //                  程序人员写程序，又拿程序换酒钱。
+ * //                  酒醒只在网上坐，酒醉还来网下眠；
+ * //                  酒醉酒醒日复日，网上网下年复年。
+ * //                  但愿老死电脑间，不愿鞠躬老板前；
+ * //                  奔驰宝马贵者趣，公交自行程序员。
+ * //                  别人笑我忒疯癫，我笑自己命太贱；
+ * //                  不见满街漂亮妹，哪个归得程序员？
+ * Created by yw on 2018/5/15.
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Teacher {
+
+    private String name;
+
+    public void response(ICallback2 callback){
+        String res = "老师回复：1+1==2";
+        System.out.println("老师收到题目并回复");
+        callback.call(res);
+    }
+
+
+    public static void main(String[] args) {
+        Teacher teacher = new Teacher("大王");
+        teacher.response(new ICallback2() {
+            @Override
+            public String call(String res) {
+                System.out.println("获取结果"+res);
+                return res;
+            }
+        });
+
+    }
+
+}
